@@ -100,12 +100,12 @@
                     </div> -->
                     </div>
                     <h3 *ngIf="distributionData && distributionData.data.length > 0">{{language.distributions}}</h3>
-                    <button mat-flat-button *ngIf="currentDisplayType.type !== 'mobile' && userService.hasRights('ROLE_DISTRIBUTIONS_DIRECTOR')" (click)="addDistribution()" class="add-button-create">
-                    <mat-icon>add</mat-icon>
-                    {{language.add}}
+                    <button mat-flat-button *ngIf="currentDisplayType.type !== 'mobile' && userService.hasRights('ROLE_DISTRIBUTION_CREATE')" (click)="addDistribution()" class="add-button-create">
+                        <mat-icon>add</mat-icon>
+                        {{language.add}}
                     </button>
-                    <button mat-fab *ngIf="currentDisplayType.type === 'mobile' && userService.hasRights('ROLE_DISTRIBUTIONS_DIRECTOR')" (click)="addDistribution()" class="add-button" [ngClass]="{'add-button-rtl': language.direction === 'rtl'}">
-                    <mat-icon>add</mat-icon>
+                    <button mat-fab *ngIf="currentDisplayType.type === 'mobile' && userService.hasRights('ROLE_DISTRIBUTION_CREATE')" (click)="addDistribution()" class="add-button" [ngClass]="{'add-button-rtl': language.direction === 'rtl'}">
+                        <mat-icon>add</mat-icon>
                     </button>
                 </div>
 
